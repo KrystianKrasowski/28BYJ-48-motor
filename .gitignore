@@ -1,0 +1,4 @@
+Debug
+*.componentinfo.xml
+*.cproj
+main.c
