@@ -28,6 +28,16 @@ void motor_set(uint8_t mask, uint16_t frequency)
 
 void motor_move_steps(int16_t steps, uint16_t frequency)
 {
+	if (frequency < FRQ_MIN)
+	{
+		frequency = FRQ_MIN;
+	}
+	
+	if (frequency > FRQ_MAX)
+	{
+		frequency = FRQ_MAX;
+	}
+	
 	uint8_t step_def[8] =
 	{
 		(1 << IN1),

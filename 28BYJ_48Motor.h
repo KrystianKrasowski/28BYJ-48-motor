@@ -14,7 +14,8 @@
 #define SET(pin) MOTOR_PORT |=  (1 << pin)
 #define CLR(pin) MOTOR_PORT &= ~(1 << pin)
 
-#define MAX_STEPS 1024
+#define FRQ_MAX 600
+#define FRQ_MIN 200
 	
 void motor_init();
 void motor_stop();
